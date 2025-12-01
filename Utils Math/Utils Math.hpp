@@ -27,10 +27,10 @@ namespace Math
 		return (b - a) > EPSILON;
 	}
 
-	int factorial(int nbr)
+	int factorial(unsigned int nbr)
 	{
 		int result = 1;
-		for (int i = 2 ; i < nbr; i++)
+		for (unsigned int i = 2 ; i < nbr; i++)
 			result *= i;
 
 		return result;
@@ -41,8 +41,8 @@ namespace Math
 		return nbr < min ? min : nbr > max ? max : nbr;
 	}
 	
-	float lerp(float nbr, float goal, float time)
+	float lerp(float start, float goal, float time)
 	{
-		return nbr + goal - nbr * time;
+		return start + goal - start * time;
 	}
 }
